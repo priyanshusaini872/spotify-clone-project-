@@ -1,0 +1,582 @@
+body{
+      font-family: "Montserrat", sans-serif;
+      margin: 0;
+      background-color: black;
+      color: white;
+       overflow: hidden;  /*overflow hidden matlab ap spotify ka page dekho to usme sidebar or musicplayer vala area scroll ni ho skta bs content area ho ske to initially ham puri body k lie overflow hidden rakhenge main class ki display flex kr denge or sidebar or main content class ko bhi color denge taki ham unhe dekh pae inititially */
+      
+ }
+
+ .main{
+    display: flex;
+    height: 100vh; /*  main div ko height dedi 100 percent of viewport height ki uske andar ki div puri page ki height le sidebar main content ot music player puri height lenge fir bad me individual div ki height set krenge 
+
+    agar ham dekhe dhyan se to background to black h hmaara par uspe jo ye sidebar or main content vgyara ka area h vo greyish h or vo curve bhi h side se ro border radius bhi h mtlb see ss
+    
+    */
+
+   padding: 0.5rem;  /* taki ye nav or lib vhyara thoda space le ske charo trf se */
+ }
+
+
+ .sidebar{
+    /* background-color: red; */
+    width: 340px;
+    border-radius: 1rem;   /*  1 rem equal 16px and jese screen chota hoga edges change honge  */
+    background-color:black ;
+
+    /* sidebar ko ham 2 div me divide kr skte h in html ek navigation vala part ek library vala or navbar me list item dal ske home etc */
+    margin-right: 0.75rem;  /* side dekhe to content area se bhi thoda sa spacing hai */
+
+ }
+
+ .main-content{
+   /* background-color: blue; */
+   flex: 1; /* iska matlab ye hai ki baki classes to apne jo unke size set kie vhi honge par jo bacha vo sara main-content class ka */
+   overflow: auto;   /* sir main content scroll ho paega or scrollbar dikhega jab content jada hoga */
+
+   background-color:#121212 ;
+   padding: 0 1.5rem 0 1.5rem;
+
+   
+   
+ }
+ .music-player{
+    /* background-color: yellow; */
+   position: fixed;  /* music player niche fix h chahe scroll bhi hora ho */
+  bottom: 0px;    /* niche se 0px pe h player */
+   width: 100%; /*chodai puri dedi */
+  height: 72px;
+  background-color: black;
+ }
+
+
+ /* jo hamre nav vgyara me home search vgyara likhaa hua vo anchor me h to uske lie niche */
+
+ a{
+    text-decoration: none;
+    color: #fff;
+ }
+/* 
+ ab agar ham dekhe to jo hmaara side bar h pura vese uska to bg color black hi h but usme jo andar nav vala area h vo greyish h uske bad black h thoda fir library greyish h to vo set krte h */
+
+ .nav{
+    background-color: #121212;
+    border-radius: 1rem;
+    flex-direction: column;/*  hamre nav option home and search ek same div me aenge but row me hme chahie verticlly to direction colum */
+    justify-content: center; 
+    height: 100px;/*  height nav section ki ye sb padding vgyara sb original site se  */
+    padding: 0.5rem 0.75rem;  /*  rem ki terms me dere as responsive krni */
+
+ }
+
+ .nav-option{
+   line-height: 2.5rem; /* 40px mtlb 2.5rem upar se height dedi*/
+   opacity: 0.7;  /* hover se phle thoda light rhega home search text*/
+   padding: 0.5rem 0.75rem;   /* top bootom left right se padding */
+ }
+
+ .nav-option i{
+   font-size: 1.25rem;  /*icon home and search ka size */
+ }
+
+
+ .nav-option:hover{
+   opacity: 1;
+ }
+
+
+ .nav-option a{
+   font-size: 1rem;  /* home search text ka size */
+    margin-left: 1rem;  /*left se thoda space aega bw icon and nav text  */
+ }
+
+
+
+ .library{
+   background-color: #121212;
+   border-radius: 1rem;
+   height: 100%;  
+   margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;  /*  height jo nav k alava bachi puri library ko di and margin top se nav section and library me space sa agya ; */
+ }
+
+ .options{
+   display: flex; /* library k options same line me ajenge  */
+  justify-content: space-between;  /* isse your library and plus arrow k beech dkstance aya */
+  align-items: center;  /* sari items same line me ajengi */
+ }
+
+ .lib-option img{
+
+   height: 1.5rem;
+   height: 1.25rem;
+ }
+
+
+ /* lib-option class k sath nav-option class bhi laga di html me taki ye hover vgyara vali same prop lib options pe bi lg jae  */
+
+.icons{
+   font-size: 1.25rem;
+   display: flex;
+}
+
+
+.icons i{
+   opacity: 0.7;
+   margin-right: 1rem;  /* icons me jo img h kagai hamne kib vale me uski opacity set ki */
+}
+ 
+.icons i:hover{
+   opacity: 1;
+}
+
+  /*  main class me padding: 0.5rem;   taki ye nav or lib vhyara thoda space le ske charo trf se upar ddedi h  */
+
+  .box{
+   height: 8rem;
+   background-color: #232323;
+   border-radius: 0.75rem;
+   margin: 0.75rem 0 1.75rem 0;
+   padding: 0.75rem 1.25rem;
+   } /* ye ham lib k neeche vale box design krre ye main box hai boxp1 in box k andar jo para 1 and para 2 h unke styling h */
+ 
+
+  .box-p1{
+   font-size: 1rem ;
+   font-weight: 500;
+  }
+
+  .box-p2{
+   font-size: 0.85rem;
+   opacity: 0.9;
+  }
+
+  .badge{
+   background-color: #fff;
+   border: none;
+   border-radius: 100px;
+   padding: 0.25rem 1rem;
+   font-weight: 700;
+   margin-top: 0.5rem;
+   height: 2rem;
+   width: fit-content;
+  
+  }
+
+  .dark-badge{
+   background-color: #000;
+   color: white;
+  }
+
+  /* sticky navbar jo content area me upar fix h  */
+
+  .sticky-nav{
+   position: sticky; /* isse jo content ka nav bar vo scroll hone pe intact rhega  */
+   top: 0;
+   background-color: #121212;
+   display: flex;
+ justify-content: space-between;   /* isse sab element nav k evenly spread hue but hame chahie arrow vala part ek trf chla jae or badges avala part ek trf so lets do to ham icons ko ek div me dal denge or badges ko ek div me */
+ align-items: center;
+ padding: 1rem 0 1rem 0; 
+  z-index: 10; /*jab ham scroll krre the to sticky nav me kuch content show hora tha to isse vo ni hoga see diff in sss */
+  }
+
+
+  .sticky-nav-icons{
+          margin-left: 0.75rem;
+  }
+
+
+  .sticky-nav-options{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+
+  }
+
+  .sticky-nav-options button{
+   margin-right: 1rem;
+  }
+
+  .nav-item{
+   margin-right: 1rem ;
+  }
+
+  /* ab ham esa karenge ki jab hamara page 1000px se chota ho to hamara explore premium badge gayab ho jae to uske lie explotre prem badge ko class hide dedi hamne or media query me define kia jab hamari width 100px se choti hogi to vo gayab jise hide class di */
+
+
+  @media(max-width:1000px){
+   .hide{
+      display: none;
+   }
+  }
+
+
+  /* cards  */
+
+  .card{
+   background-color:#232323 ;
+   width: 150px;
+   border-radius: 0.5rem;
+   padding: 1rem;
+   margin-top: 1rem;
+   margin-left: 1.5rem;
+  }
+
+  .card-container{
+   display: flex;
+    flex-wrap:wrap ; /* jese niche hamare pas 5 card hai to jab size chota hora tha to vo same line me ane ki vjh se card jada chote hore the flex wrsp se hua ki jab size kam hoga screen ka to card niche vali line me shift ho jaenge  */
+   
+  }
+
+  .card-img{
+   width: 100%;
+   border-radius: 0.5rem;
+  }
+
+
+  .card-title{
+   font-weight: 600;
+  }
+
+  .card-info{
+   font-size: 0.85rem;
+   opacity: 0.8;
+  }
+
+  .footer{
+   height: 600px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+
+  .line{
+   width:90%;
+   height: 30%;
+  border-top: 1px solid white;  /* hame border me bs upar ki line chahie thi islie border top naki border */
+   opacity: 0.4;
+  }
+
+
+
+
+
+
+  /* footer content */
+
+
+
+
+
+  footer {
+   padding: 0.5rem 1.8rem 2.5rem 1.8rem;
+}
+
+.content-footer {
+   display: flex;
+   margin-bottom: 2.5rem;
+   flex-wrap: wrap;
+}
+
+.list {
+   margin-right: 6rem;
+   overflow-wrap: break-word;
+}
+
+.content-footer ul {
+   list-style: none;
+   padding: 0;
+}
+
+.content-footer li {
+   font-size: 0.95rem;
+   font-weight: 500;
+   opacity: 0.8;
+   padding: 0.4rem 0;
+   cursor: pointer;
+}
+
+li:hover {
+   opacity: 1;
+   text-decoration: underline;
+}
+
+.list li:first-child {
+   font-size: 1rem;
+   font-weight: 600;
+   opacity: 1;
+   color: #fff;
+   cursor: auto;
+}
+
+.list li:first-child:hover {
+   text-decoration: none;
+}
+
+.social-media {
+   display: flex;
+   padding-top: 1.5rem;
+   align-items: flex-start;
+   margin-left: 3rem;
+   font-size: 1.2rem;
+  
+}
+
+
+.social-media a{
+   justify-content: space-between;
+   padding: 0.7rem 0 0 0.8rem;
+   opacity: 0.7;
+}
+
+.social-media a:hover{
+   opacity: 1;
+   transform: scale(1.1);
+}
+ 
+.social-media .badge:last-child {
+   margin-right: 0;
+}
+
+
+
+hr {
+   opacity: 0.1;
+   margin: 0;
+   margin-bottom: auto;
+}
+
+.last-footer {
+   display: flex;
+   margin-bottom: 2rem;
+}
+
+.last-footer ul {
+   display: flex;
+   list-style: none;
+   margin-left: 0;
+   margin: 2rem auto 5rem 0;
+   padding: 0;
+}
+
+.last-footer li {
+   margin-right: 1rem;
+   font-size: 0.85rem;
+   font-weight: 500;
+   opacity: 0.7;
+   padding: 0.4rem 0;
+   cursor: pointer;
+}
+
+.last-footer li:hover {
+   text-decoration: none;
+}
+
+.last-footer p {
+   font-size: 0.85rem;
+   opacity: 0.7;
+   font-weight: 500;
+   margin-top: 2.4rem;
+}
+
+.last-footer p i {
+   font-size: 0.7rem;
+}
+
+
+ 
+
+
+
+
+         
+
+
+
+  /* left player */
+
+  .album {
+   display: flex;
+   color: white;
+   margin-left: 0.5rem;
+   align-items: center;
+}
+
+.album-picture {
+   height: 3.5rem;
+   width: 3.5rem;
+   border-radius: 0.1rem;
+   box-shadow: 2 2 5px black;
+}
+
+.song-details {
+   list-style: none;
+   margin-left: -1.5rem;
+   line-height: 1.1rem;
+}
+
+.name-of-album {
+   font-size: 0.85rem;
+   font-weight: 600;
+   cursor: pointer;
+}
+
+.singers {
+   font-size: 0.75rem;
+   opacity: 0.7;
+   cursor: pointer;
+}
+
+.like-icon {
+   height: 1.3rem;
+   margin-left: 1rem;
+}
+
+
+
+  /* mid music player */
+
+
+
+  .music-player{
+   display: flex;
+   justify-content:space-between ;
+   align-items: center;
+  }
+
+  .album{
+   width: 25%;
+  }
+
+  .player{
+   width: 50%;
+  }
+
+  .controls{
+   width: 25%;
+  }
+
+.player-controls{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+  .player-control-icon{
+   height: 1rem;
+   margin-left: 1.75rem;
+   opacity: 0.7;
+  }
+
+  .player-control-icon:hover{
+   opacity: 1;
+  }
+
+  .playback-bar{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+
+
+  .progress-bar{
+   width: 70%;
+   appearance: none;  /* isse jo default design hota hai kisi element ka vo hat jata hai */
+   background-color: transparent;
+   cursor: pointer;
+   margin-left: 10%;
+   margin-right: 10%;
+  }
+
+  .progress-bar::-webkit-slider-runnable-track{
+   background-color: #ddd;
+   border-radius: 100px;
+   height: 0.2rem;
+  }
+
+
+  .progress-bar::-webkit-slider-thumb{
+   appearance: none;
+   height: 1rem;
+   width: 1rem;
+   background-color: #1bd760;
+   border-radius: 50%;
+   margin-top:-6px ;
+  }
+
+
+ 
+
+
+  /* right side player */
+
+  .icon6 {
+   height: 2.5rem;
+   width: 1.6rem;
+   margin-bottom: -0.3rem;
+   margin-left: 0.5rem;
+   opacity: 0.9;
+}
+
+.icon7 {
+   height: 0.2rem;
+   width: 0.2rem;
+   margin-bottom: 0.6rem;
+   opacity: 0.7;
+   margin-left: 1rem;
+}
+
+.controls-child:hover {
+   opacity: 1;
+   color: white;
+}
+.controls {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   box-sizing: border-box;
+   margin-right: 1.5rem;
+   cursor: pointer;
+}
+
+.controls-child {
+   color: white;
+}
+
+.icon1 {
+   height: 2.3rem;
+   width: 1.6rem;
+   opacity: 0.9;
+}
+
+.icon2 {
+   height: 2.4rem;
+   width: 1.6rem;
+   margin-left: 0.5rem;
+   opacity: 0.9;
+}
+
+.icon3 {
+   height: 1.3rem;
+   width: 1.3rem;
+   margin-left: 0.5rem;
+   opacity: 0.7;
+}
+
+.icon4 {
+   height: 0.9rem;
+   width: 1rem;
+   margin-left: 0.9rem;
+   opacity: 0.7;
+}
+
+.icon5 {
+   height: 2.3rem;
+   width: 1.6rem;
+   margin-left: 0.6rem;
+   opacity: 0.9;
+}
+ 

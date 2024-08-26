@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spotify-webplayer.music for everyone</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="/assets/logo.png"> <!-- ye jo upar document ka name hota h vaha logo show hoga isse -->
+
+</head>
+<body>
+    <!-- normally hame spotify inspect krna allow ni karta to ham phle spotify k login k bad link copy kr lenge or new tab me already inspect kholke search kr leneg spotify  -->
+
+    <!-- ham jab bnaenge proj to apne spotify page ko teen hisso me batenge ek left me side bar ek main content area ek niche music player vala see ss to ye is trh ki grid hai to ham ek main div banaenge or uske andar ye 3 div bnaenge 
+     
+    spotify me khudka font h unka to uska similar font hai monsterrat to ham uska use karenge -->
+
+    <div class="main">
+        <!-- sidebar ko ham 2 div me divide kr skte h ek navigation vala part ek library vala or navbar me list item dal ske home etc nav class me further ek class banegi nav option usme icons vgyaraa honge  -->
+
+        <div class="sidebar">
+
+        <div class="nav">
+
+            <div class="nav-option" style="opacity: 1;">
+                <i class="fa-solid fa-house"></i>
+                <a href="#">Home</a>
+            </div>
+
+            
+            <div class="nav-option">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="#">Search</a>
+            </div>
+
+
+
+            <!-- ek chhej dekho library jaha likha hua usme andar hi teen div h ek your library vali ek plus sign vali ek arrow valito ham bhi apni library class me ek div your libraray ki bnae or ek plus arrow ki -->
+
+        </div>
+        <div class="library">
+
+        <div class="options">
+            <div class="lib-option nav-option"> <!--  vese to class lib-option hi hai but nav-option bhi dedi taki nav options k style ;ib options me lg jae 
+                -->
+                <img src="assets/library_icon.png">
+                <a href="#">Your Library</a>
+            </div>
+
+<div class="icons">
+
+    <i class="fa-solid fa-plus"></i>
+    <i class="fa-solid fa-arrow-right"></i>
+
+
+</div>
+
+
+        </div>
+
+        <div class="lib-boxes">
+        <div class="box">  
+    
+         <!-- ek class bnai box hamne  usme ek box para 1 ek para 2 or ek button badge k lie divs 
+          
+         vese ham div ni bnaenge para k lie as usse hmare pas space shi ni ari thi paras k beech tomsimple para tag me likhenege smilar button bhi button tag me likha-->
+
+    <p class="box-p1"> Create your first playlist</p>
+    <p class="box-p2">Its easy , We'll help you</p>
+    <button class="badge"> Create Playlist</button>
+
+</div>
+
+    <div class="box">  
+    
+   <p class="box-p1"> Lets find some podcasts to follow</p>
+   <p class="box-p2">We'll keep you updated on new episodes</p>
+   <button class="badge"> browse podcasts</button>
+
+
+</div>
+
+        </div>
+
+        </div>
+
+</div>
+
+         <div class="main-content"> <!--isme andar 2 div honge ek sticky navbar upar or ek niche ka area jo scroll hoga -->
+
+<!-- 
+            hame chahie arrow vala part ek trf chla jae or badges avala part ek trf so lets do to ham icons ie img ko ek div me dal denge or badges ko ek div me -->
+
+
+            <div class="sticky-nav">
+
+
+                <div class="sticky-nav-icons">
+                    <img src="assets/backward_icon.png">
+              <img src="assets/forward_icon.png" class="hide">
+                </div>
+
+
+                <div class="sticky-nav-options">
+                    
+                    <button class="badge nav-item hide"> Explore Premium</button>
+                     <button class="badge nav-item dark-badge"> <i class="fa-regular fa-circle-down" style="margin-right: 5px;"></i>   Install App </button>  <!--here we gave this button three classes teeno class styling me alag alag kam aengi badge class for basic styling nav-item class and dark badge class as second badge ko color dark dena tha  -->
+                    <i class="fa-regular fa-user nav-item"></i>
+                </div>
+              
+
+            </div>
+           
+          
+
+            <!-- cards -->
+
+                <h2> Recently played </h2>
+
+                <div class="card-container">
+                    <div class="card">
+                    <img src="assets/card1img.jpeg" class="card-img" >
+                    <p class="card-title"> Top 50 global</p>
+                    <p class="card-info"> Your daily updates of most played tracks...</p>
+                </div>
+                </div>
+
+<!-- 
+                hamara phla card to sticky nav class me agya to vo alag a gya  baki niche k teen card hmare card container class me ek sath aye display flex k sath -->
+<h2>
+    Trending now near you
+</h2>
+
+<div class="card-container">
+
+                <div class="card">
+                    <img src="assets/card2img.jpeg" class="card-img" >
+                    <p class="card-title"> Top 50 global</p>
+                    <p class="card-info"> Your daily updates of most played tracks...</p>
+                </div>
+
+                <div class="card">
+                    <img src="assets/card3img.jpeg" class="card-img" >
+                    <p class="card-title"> Top 50 global</p>
+                    <p class="card-info"> Your daily updates of most played tracks...</p>
+                </div>
+
+                <div class="card">
+                    <img src="assets/card4img.jpeg" class="card-img" >
+                    <p class="card-title"> Top 50 global</p>
+                    <p class="card-info"> Your daily updates of most played tracks...</p>
+                </div>
+
+                <div class="card">
+                    <img src="assets/card2img.jpeg" class="card-img" >
+                    <p class="card-title"> Top 50 global</p>
+                    <p class="card-info"> Your daily updates of most played tracks...</p>
+                </div>
+
+                <div class="card">
+                    <img src="assets/card3img.jpeg" class="card-img" >
+                    <p class="card-title"> Top 50 global</p>
+                    <p class="card-info"> Your daily updates of most played tracks...</p>
+                </div>
+
+                </div>
+           
+
+
+
+                <h2> Featured charts </h2>
+
+                <div class="card-container">
+                    <div class="card">
+                    <img src="assets/card5img.jpeg" class="card-img" >
+                    <p class="card-title"> Filmy Special</p>
+                    <p class="card-info"> Your daily updates of most played tracks...</p>
+                </div>
+
+                <div class="card">
+                    <img src="assets/card6img.jpeg" class="card-img" >
+                    <p class="card-title"> Top Songs India</p>
+                    <p class="card-info"> Your daily updates of most played tracks...</p>
+                </div>
+                
+
+                <div class="card">
+                    <img src="assets/card4img.jpeg" class="card-img" >
+                    <p class="card-title"> Top 50 global</p>
+                    <p class="card-info"> Your daily updates of most played tracks...</p>
+                </div>
+
+                <div class="card">
+                    <img src="assets/card5img.jpeg" class="card-img" >
+                    <p class="card-title"> Top 50 global</p>
+                    <p class="card-info"> Your daily updates of most played tracks...</p>
+                </div>
+         </div>
+         
+
+        
+
+
+
+            <!-- footer content yha footer class me line class h jo white line h footer line me or is white line class me footer ka content baki line or in sbko css me style kia hua hai -->
+
+
+            <div class="footer">
+                <div class="line">                
+                    
+                    <footer>
+                    <div class="content-footer">
+                        <div class="list">
+                            <ul>
+                                <li>Company</li>
+                                <li>About</li>
+                                <li>Jobs</li>
+                                <li>For the Record</li>
+                            </ul>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                <li>Communitites</li>
+                                <li>For Artists</li>
+                                <li>Developers</li>
+                                <li>Advertising</li>
+                                <li>Investors</li>
+                                <li>Vendors</li>
+                            </ul>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                <li>Useful links</li>
+                                <li>Support</li>
+                                <li>Free Mobile App</li>
+                            </ul>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                <li>Spotify Plans</li>
+                                <li>Premium Individual</li>
+                                <li>Premium Duo</li>
+                                <li>Premium Family</li>
+                                <li>Premium Student</li>
+                                <li>Spotify Free</li>
+                            </ul>
+                        </div>
+                        <div class="social-media">
+                           <a i class="fa-brands fa-instagram"></i></a>
+                            <a i class="fa-brands fa-twitter"></i></a>
+                            <a i class="fa-brands fa-facebook"></i></a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="last-footer">
+                        <ul>
+                            <li>Legal</li>
+                            <li>Safety & Privacy Center</li>
+                            <li>Privacy Policy</li>
+                            <li>Cookies</li>
+                            <li>About Ads</li>
+                            <li>Accessibility</li>
+                        </ul>
+                        <p><i class="fa-regular fa-copyright"></i> 2024 Spotify AB</p>
+                    </div>
+                </footer>
+            
+            </div>
+        
+
+    
+            </div>
+
+         
+    
+    
+    
+    
+          </div>
+
+
+
+
+            </div>
+         </div>
+        </div>
+    </div>
+
+
+        <!-- music player  div k andar 3 div hongi ek album ek beech vala player or ek teesra controls fir player k andar player controls like pause vgyara and playback bar hoga jsime time vgyara hota hai in 3 main classes ko width denge percentsge me accordingly in css-->
+        
+
+
+        <div class="music-player"> 
+
+            <div class="album">
+
+                <img src="./assets/album_picture.jpeg" alt="Album" class="album-picture">
+                <ul class="song-details">
+                    <li class="name-of-album">Hips Don't Lie</li>
+                    <li class="singers">Shakira</li>
+                </ul>
+                <img src="./assets/album_icon1.png" alt="Icon" class="like-icon">
+            </div>
+
+
+            <div class="player">
+            
+                <div class="player-controls">
+                    <img src="assets/player_icon1.png" class="player-control-icon">
+                    <img src="assets/player_icon2.png" class="player-control-icon">
+                    <img src="assets/player_icon3.png" class="player-control-icon" style="opacity: 1; height:2rem; ">    
+                    
+                    <!-- beech vala icon jo img h pause vala vo bada hai bakio se or vo hover krne de opscity change na ho to yha fix krdi -->
+                    <img src="assets/player_icon4.png" class="player-control-icon">
+                    <img src="assets/player_icon5.png" class="player-control-icon">
+                </div>
+                
+                <div class="playback-bar"></div>
+                <span class="curr-time">00:00</span>
+                <input type="range" min="0" max="100" class="progress-bar" step="1">
+                <span class="tot-time" class="progress-bar"> 3:33 </span>
+            </div>
+           
+            
+            
+             
+            <div class="controls">
+
+                <img src="./assets/controls_icon1.png" alt="Icon" class="icon1" controls-child>
+                <img src="./assets/controld_icon2.png" alt="Icon" class="icon2" controls-child>
+                <img src="./assets/controls_icon3.png" alt="Icon" class="icon3" controls-child>
+                <img src="./assets/controls_icon4.png" alt="Icon" class="icon4" controls-child>
+                <img src="./assets/controls_icon5.png" alt="Icon" class="icon5" controls-child>
+                <input type="range" min="0" max="100" step="1" class="volume-bar controls-child">
+                <img src="./assets/album_icon2.png" alt="Icon" class="icon6 controls-child">
+                <i class="fa-solid fa-up-right-and-down-left-from-center icon7 controls-child"></i>
+            </div>
+
+
+        </div>
+
+
+
+        
+
+    </div>
+
+</div>
+
+</body>
+</html>
